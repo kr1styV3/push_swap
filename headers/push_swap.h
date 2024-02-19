@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 22:46:17 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/19 13:58:05 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/19 17:30:18 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,5 @@ void		clear(t_list **stack);
 void		ft_start(t_list *stack_a, t_list *stack_b);
 void		ft_sort(t_list *stack_a, t_list *stack_b);
 char		*ft_putnbr(int n);
-
 
 #endif
