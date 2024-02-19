@@ -6,15 +6,15 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 22:48:52 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/18 23:58:13 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/19 14:38:09 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/push_swap.h"
 
-t_list	*parse(int argc, char **argv)
+t_list	**parse(int argc, char **argv)
 {
-	t_list	*stack;
+	t_list	**stack;
 	t_list	*new_node;
 	int		num;
 	int		i;
@@ -23,15 +23,15 @@ t_list	*parse(int argc, char **argv)
 	stack = NULL;
 	while (i < argc)
 	{
+		if (is_valid_number(argv[i]) == 0)
+			return (NULL);
 		num = ft_atoi(argv[i]);
 		new_node = ft_lstnew(num);
 		if (!new_node)
-			clear(&stack);
-		if (number_exists(stack, num))
+			clear(stack);
+		if (number_exists(*stack, num))
 			exit(1);
-		if (!is_valid_number(argv[i]))
-			return (NULL);
-		ft_lstadd_front(&stack, new_node);
+		ft_lstadd_front(stack, new_node);
 	}
 	return (stack);
 }

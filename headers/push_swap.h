@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 22:46:17 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/19 00:18:46 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/19 13:58:05 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-t_list		*parse(int argc, char **argv);
+t_list		**parse(int argc, char **argv);
 int			number_exists(t_list *stack, int num);
 int			is_valid_number(char *str);
 void		clear(t_list **stack);
