@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 22:48:52 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/19 14:38:09 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/19 14:59:01 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@ t_list	**parse(int argc, char **argv)
 	int		i;
 
 	i = 1;
-	stack = NULL;
+	stack = malloc(sizeof(t_list *));
+	if (!stack)
+		return (NULL);
 	while (i < argc)
 	{
 		if (is_valid_number(argv[i]) == 0)
@@ -31,7 +33,8 @@ t_list	**parse(int argc, char **argv)
 			clear(stack);
 		if (number_exists(*stack, num))
 			exit(1);
-		ft_lstadd_front(stack, new_node);
+		ft_lstadd_back(stack, new_node);
+		i++;
 	}
 	return (stack);
 }
