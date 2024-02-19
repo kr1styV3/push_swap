@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 22:46:17 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/19 18:22:51 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/19 18:31:19 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 # include <unistd.h>
 
 t_int_list		*arg_list_parsing(int argc, char **argv);
-t_int_list		*arg_str_parsing(int argc, char **argv);
-int			is_valid_number(char *str);
+t_int_list		*arg_str_parsing(char **argv);
 
 #endif

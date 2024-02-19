@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 22:48:52 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/19 18:22:53 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/19 18:30:52 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,18 @@ t_int_list	*arg_list_parsing(int argc, char **argv)
 		new_node = ft_int_lstnew(num);
 		if (!new_node)
 			ft_int_lstclear(stack);
-		ft_lstadd_back(stack, new_node);
+		ft_int_lstadd_back(&stack, new_node);
 		i++;
 	}
 	return (stack);
 }
 
-t_int_list	*arg_str_parsing(int argc, char **argv)
+t_int_list	*arg_str_parsing(char **argv)
 {
 	t_int_list	*stack;
 	t_int_list	*new_node;
-	char	**split;
-	int		i;
+	char		**split;
+	int			i;
 
 	i = 0;
 	stack = malloc(sizeof(t_int_list *));
@@ -54,7 +54,7 @@ t_int_list	*arg_str_parsing(int argc, char **argv)
 		new_node = ft_int_lstnew(ft_atoi(split[i]));
 		if (!new_node)
 			ft_int_lstclear(stack);
-		ft_lstadd_back(stack, new_node);
+		ft_int_lstadd_back(&stack, new_node);
 		i++;
 	}
 	ft_free_split(split);

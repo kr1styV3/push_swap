@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 22:45:13 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/19 18:22:53 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/19 18:32:40 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int	main(int argc, char **argv)
 	t_int_list		*head;
 	t_int_list		*stack_a;
 
-	if (check_input(argc, argv) == 0)
-		head = arg_str_parsing(argc, argv);
+	if (ft_check_input(argc, argv) == 0)
+		head = arg_str_parsing(argv);
 	else
 		head = arg_list_parsing(argc, argv);
 	stack_a = head;
