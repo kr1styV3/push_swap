@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 22:48:52 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/19 19:01:31 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/02/20 01:18:14 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ t_int_list	*arg_list_parsing(int argc, char **argv)
 		new_node = ft_int_lstnew(num);
 		if (!new_node)
 			ft_int_lstclear(stack);
+
 		ft_int_lstadd_back(&stack, new_node);
 		i++;
 	}
