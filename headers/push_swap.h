@@ -6,7 +6,7 @@
 /*   By: chrlomba <chrlomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 22:46:17 by chrlomba          #+#    #+#             */
-/*   Updated: 2024/02/23 13:45:14 by chrlomba         ###   ########.fr       */
+/*   Updated: 2024/05/30 18:25:57 by chrlomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,17 @@ t_int_list		*arg_str_parsing(char **argv);
 void			ft_push_swap(t_int_list **stack_a, t_int_list **stack_b);
 
 // helper
+int				ft_small_check(t_int_list **stack_a, t_int_list **stack_b, int size);
 void			ft_print_stack(t_int_list *stack_a, t_int_list *stack_b);
-t_int_list		*ft_lis_find(t_int_list *stack_a);
-void			ft_pivot_find(t_int_list **stack_a,
-					t_int_list **stack_b, int size);
-void			ft_bubble_sort(t_int_list **stack_a, t_int_list **stack_b);
+void			ft_sort_three(t_int_list **stack_a);
+void			ft_sort_four(t_int_list **stack_a, t_int_list **stack_b);
+void			ft_sort_five(t_int_list **stack_a, t_int_list **stack_b);
+void			push_smallest_to_b(t_int_list **stack_a, t_int_list **stack_b);
+void			ft_sort_insertion(t_int_list **stack_a);
 
+void apply_final_rotations(t_int_list **stack, int rotations);
+int calculate_final_rotations(t_int_list *stack);
+void apply_rotations(t_int_list **stack_a, t_int_list **stack_b, int target_pos);
+int calculate_best_rotations(t_int_list **stack_a, t_int_list **stack_b, int target_pos);
+int find_best_position(t_int_list *stack, int value);
 #endif

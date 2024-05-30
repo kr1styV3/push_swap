@@ -4,6 +4,7 @@
 		"printf.h": "c",
 		"string.h": "c",
 		"push_swap_helper.h": "c",
-		"ft_printf.h": "c"
+		"ft_printf.h": "c",
+		"push_swap.h": "c"
 	}
 }
